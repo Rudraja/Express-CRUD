@@ -5,7 +5,10 @@ const {
 
 const ifErrorInResSendIt = (res, next) => {
     if (Object.keys(res.locals)) return next();
-}
+};
+const dbFilePath = `${__dirname}../../../data/diary-db.json`;
+console.log(dbFilePath);
+
 
 module.exports = {
     getAll: async (req, res, next) => {
